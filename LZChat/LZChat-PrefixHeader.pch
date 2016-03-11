@@ -13,5 +13,11 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
+#import <EaseMob.h>
+
+/**
+ *  宏定义
+ */
+#define EMAppKey @"lzchat#lzchat"
 
 #endif /* LZChat_PrefixHeader_pch */
