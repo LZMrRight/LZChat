@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		848D9D111C9285ED00AD5670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D101C9285ED00AD5670 /* main.m */; };
+		848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D131C9285ED00AD5670 /* AppDelegate.m */; };
+		848D9D171C9285ED00AD5670 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D161C9285ED00AD5670 /* ViewController.m */; };
+		848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D181C9285ED00AD5670 /* Main.storyboard */; };
+		848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D1B1C9285ED00AD5670 /* Assets.xcassets */; };
+		848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */; };
+		848D9D2A1C9285EE00AD5670 /* LZChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D291C9285EE00AD5670 /* LZChatTests.m */; };
+		848D9D351C9285EE00AD5670 /* LZChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D341C9285EE00AD5670 /* LZChatUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		848D9D261C9285EE00AD5670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848D9D041C9285ED00AD5670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848D9D0B1C9285ED00AD5670;
+			remoteInfo = LZChat;
+		};
+		848D9D311C9285EE00AD5670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848D9D041C9285ED00AD5670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848D9D0B1C9285ED00AD5670;
+			remoteInfo = LZChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		848D9D0C1C9285ED00AD5670 /* LZChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		848D9D101C9285ED00AD5670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		848D9D121C9285ED00AD5670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		848D9D131C9285ED00AD5670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		848D9D151C9285ED00AD5670 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		848D9D161C9285ED00AD5670 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		848D9D191C9285ED00AD5670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		848D9D1B1C9285ED00AD5670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		848D9D1E1C9285ED00AD5670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		848D9D201C9285ED00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848D9D251C9285EE00AD5670 /* LZChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848D9D291C9285EE00AD5670 /* LZChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatTests.m; sourceTree = "<group>"; };
+		848D9D2B1C9285EE00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848D9D301C9285EE00AD5670 /* LZChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848D9D341C9285EE00AD5670 /* LZChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatUITests.m; sourceTree = "<group>"; };
+		848D9D361C9285EE00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848D9D091C9285ED00AD5670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D221C9285EE00AD5670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D2D1C9285EE00AD5670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848D9D031C9285ED00AD5670 = {
+			isa = PBXGroup;
+			children = (
+				848D9D0E1C9285ED00AD5670 /* LZChat */,
+				848D9D281C9285EE00AD5670 /* LZChatTests */,
+				848D9D331C9285EE00AD5670 /* LZChatUITests */,
+				848D9D0D1C9285ED00AD5670 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		848D9D0D1C9285ED00AD5670 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848D9D0C1C9285ED00AD5670 /* LZChat.app */,
+				848D9D251C9285EE00AD5670 /* LZChatTests.xctest */,
+				848D9D301C9285EE00AD5670 /* LZChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		848D9D0E1C9285ED00AD5670 /* LZChat */ = {
+			isa = PBXGroup;
+			children = (
+				848D9D121C9285ED00AD5670 /* AppDelegate.h */,
+				848D9D131C9285ED00AD5670 /* AppDelegate.m */,
+				848D9D151C9285ED00AD5670 /* ViewController.h */,
+				848D9D161C9285ED00AD5670 /* ViewController.m */,
+				848D9D181C9285ED00AD5670 /* Main.storyboard */,
+				848D9D1B1C9285ED00AD5670 /* Assets.xcassets */,
+				848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */,
+				848D9D201C9285ED00AD5670 /* Info.plist */,
+				848D9D0F1C9285ED00AD5670 /* Supporting Files */,
+			);
+			path = LZChat;
+			sourceTree = "<group>";
+		};
+		848D9D0F1C9285ED00AD5670 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				848D9D101C9285ED00AD5670 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		848D9D281C9285EE00AD5670 /* LZChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				848D9D291C9285EE00AD5670 /* LZChatTests.m */,
+				848D9D2B1C9285EE00AD5670 /* Info.plist */,
+			);
+			path = LZChatTests;
+			sourceTree = "<group>";
+		};
+		848D9D331C9285EE00AD5670 /* LZChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				848D9D341C9285EE00AD5670 /* LZChatUITests.m */,
+				848D9D361C9285EE00AD5670 /* Info.plist */,
+			);
+			path = LZChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848D9D0B1C9285ED00AD5670 /* LZChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848D9D391C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChat" */;
+			buildPhases = (
+				848D9D081C9285ED00AD5670 /* Sources */,
+				848D9D091C9285ED00AD5670 /* Frameworks */,
+				848D9D0A1C9285ED00AD5670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZChat;
+			productName = LZChat;
+			productReference = 848D9D0C1C9285ED00AD5670 /* LZChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		848D9D241C9285EE00AD5670 /* LZChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848D9D3C1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatTests" */;
+			buildPhases = (
+				848D9D211C9285EE00AD5670 /* Sources */,
+				848D9D221C9285EE00AD5670 /* Frameworks */,
+				848D9D231C9285EE00AD5670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				848D9D271C9285EE00AD5670 /* PBXTargetDependency */,
+			);
+			name = LZChatTests;
+			productName = LZChatTests;
+			productReference = 848D9D251C9285EE00AD5670 /* LZChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		848D9D2F1C9285EE00AD5670 /* LZChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848D9D3F1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatUITests" */;
+			buildPhases = (
+				848D9D2C1C9285EE00AD5670 /* Sources */,
+				848D9D2D1C9285EE00AD5670 /* Frameworks */,
+				848D9D2E1C9285EE00AD5670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				848D9D321C9285EE00AD5670 /* PBXTargetDependency */,
+			);
+			name = LZChatUITests;
+			productName = LZChatUITests;
+			productReference = 848D9D301C9285EE00AD5670 /* LZChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848D9D041C9285ED00AD5670 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = lizheng;
+				TargetAttributes = {
+					848D9D0B1C9285ED00AD5670 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					848D9D241C9285EE00AD5670 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 848D9D0B1C9285ED00AD5670;
+					};
+					848D9D2F1C9285EE00AD5670 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 848D9D0B1C9285ED00AD5670;
+					};
+				};
+			};
+			buildConfigurationList = 848D9D071C9285ED00AD5670 /* Build configuration list for PBXProject "LZChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 848D9D031C9285ED00AD5670;
+			productRefGroup = 848D9D0D1C9285ED00AD5670 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848D9D0B1C9285ED00AD5670 /* LZChat */,
+				848D9D241C9285EE00AD5670 /* LZChatTests */,
+				848D9D2F1C9285EE00AD5670 /* LZChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848D9D0A1C9285ED00AD5670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */,
+				848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */,
+				848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D231C9285EE00AD5670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D2E1C9285EE00AD5670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848D9D081C9285ED00AD5670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848D9D171C9285ED00AD5670 /* ViewController.m in Sources */,
+				848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */,
+				848D9D111C9285ED00AD5670 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D211C9285EE00AD5670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848D9D2A1C9285EE00AD5670 /* LZChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848D9D2C1C9285EE00AD5670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848D9D351C9285EE00AD5670 /* LZChatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		848D9D271C9285EE00AD5670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848D9D0B1C9285ED00AD5670 /* LZChat */;
+			targetProxy = 848D9D261C9285EE00AD5670 /* PBXContainerItemProxy */;
+		};
+		848D9D321C9285EE00AD5670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848D9D0B1C9285ED00AD5670 /* LZChat */;
+			targetProxy = 848D9D311C9285EE00AD5670 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		848D9D181C9285ED00AD5670 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848D9D191C9285ED00AD5670 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848D9D1E1C9285ED00AD5670 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		848D9D371C9285EE00AD5670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		848D9D381C9285EE00AD5670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		848D9D3A1C9285EE00AD5670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		848D9D3B1C9285EE00AD5670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		848D9D3D1C9285EE00AD5670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LZChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZChat.app/LZChat";
+			};
+			name = Debug;
+		};
+		848D9D3E1C9285EE00AD5670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LZChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZChat.app/LZChat";
+			};
+			name = Release;
+		};
+		848D9D401C9285EE00AD5670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LZChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LZChat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		848D9D411C9285EE00AD5670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LZChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LZChat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848D9D071C9285ED00AD5670 /* Build configuration list for PBXProject "LZChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848D9D371C9285EE00AD5670 /* Debug */,
+				848D9D381C9285EE00AD5670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848D9D391C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848D9D3A1C9285EE00AD5670 /* Debug */,
+				848D9D3B1C9285EE00AD5670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		848D9D3C1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848D9D3D1C9285EE00AD5670 /* Debug */,
+				848D9D3E1C9285EE00AD5670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		848D9D3F1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848D9D401C9285EE00AD5670 /* Debug */,
+				848D9D411C9285EE00AD5670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 848D9D041C9285ED00AD5670 /* Project object */;
+}
