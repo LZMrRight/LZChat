@@ -53,6 +53,7 @@
 		848D9D301C9285EE00AD5670 /* LZChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D341C9285EE00AD5670 /* LZChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatUITests.m; sourceTree = "<group>"; };
 		848D9D361C9285EE00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848D9D431C929A6500AD5670 /* LZChat-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LZChat-PrefixHeader.pch"; sourceTree = "<group>"; };
 		9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AA2F2AFB7C2F544932EE56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,14 +117,8 @@
 		848D9D0E1C9285ED00AD5670 /* LZChat */ = {
 			isa = PBXGroup;
 			children = (
-				848D9D121C9285ED00AD5670 /* AppDelegate.h */,
-				848D9D131C9285ED00AD5670 /* AppDelegate.m */,
 				848D9D151C9285ED00AD5670 /* ViewController.h */,
 				848D9D161C9285ED00AD5670 /* ViewController.m */,
-				848D9D181C9285ED00AD5670 /* Main.storyboard */,
-				848D9D1B1C9285ED00AD5670 /* Assets.xcassets */,
-				848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */,
-				848D9D201C9285ED00AD5670 /* Info.plist */,
 				848D9D0F1C9285ED00AD5670 /* Supporting Files */,
 			);
 			path = LZChat;
@@ -132,7 +127,14 @@
 		848D9D0F1C9285ED00AD5670 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				848D9D181C9285ED00AD5670 /* Main.storyboard */,
+				848D9D121C9285ED00AD5670 /* AppDelegate.h */,
+				848D9D131C9285ED00AD5670 /* AppDelegate.m */,
+				848D9D1B1C9285ED00AD5670 /* Assets.xcassets */,
 				848D9D101C9285ED00AD5670 /* main.m */,
+				848D9D201C9285ED00AD5670 /* Info.plist */,
+				848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */,
+				848D9D431C929A6500AD5670 /* LZChat-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +231,7 @@
 		848D9D041C9285ED00AD5670 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LZ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = lizheng;
 				TargetAttributes = {
@@ -487,6 +490,8 @@
 			baseConfigurationReference = 9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
@@ -499,6 +504,8 @@
 			baseConfigurationReference = 50E25415B9977735FA4544CE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
