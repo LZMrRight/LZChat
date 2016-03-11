@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6102C2C9C06F607571D3E9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA2F2AFB7C2F544932EE56 /* libPods.a */; };
 		848D9D111C9285ED00AD5670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D101C9285ED00AD5670 /* main.m */; };
 		848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D131C9285ED00AD5670 /* AppDelegate.m */; };
 		848D9D171C9285ED00AD5670 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D161C9285ED00AD5670 /* ViewController.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50E25415B9977735FA4544CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		848D9D0C1C9285ED00AD5670 /* LZChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D101C9285ED00AD5670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		848D9D121C9285ED00AD5670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		848D9D301C9285EE00AD5670 /* LZChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D341C9285EE00AD5670 /* LZChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatUITests.m; sourceTree = "<group>"; };
 		848D9D361C9285EE00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F1AA2F2AFB7C2F544932EE56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6102C2C9C06F607571D3E9A1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		762C644A0A26D15AA483BD47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA2F2AFB7C2F544932EE56 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		848D9D031C9285ED00AD5670 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				848D9D281C9285EE00AD5670 /* LZChatTests */,
 				848D9D331C9285EE00AD5670 /* LZChatUITests */,
 				848D9D0D1C9285ED00AD5670 /* Products */,
+				EFC3D3479E826051DC382D1A /* Pods */,
+				762C644A0A26D15AA483BD47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = LZChatUITests;
 			sourceTree = "<group>";
 		};
+		EFC3D3479E826051DC382D1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */,
+				50E25415B9977735FA4544CE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848D9D391C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChat" */;
 			buildPhases = (
+				79D56D5814365C4587322A0D /* Check Pods Manifest.lock */,
 				848D9D081C9285ED00AD5670 /* Sources */,
 				848D9D091C9285ED00AD5670 /* Frameworks */,
 				848D9D0A1C9285ED00AD5670 /* Resources */,
+				57C68AFB43299A75FF098E36 /* Embed Pods Frameworks */,
+				C266708D4783D0E86051496F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57C68AFB43299A75FF098E36 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79D56D5814365C4587322A0D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C266708D4783D0E86051496F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		848D9D081C9285ED00AD5670 /* Sources */ = {
@@ -409,6 +484,7 @@
 		};
 		848D9D3A1C9285EE00AD5670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZChat/Info.plist;
@@ -420,6 +496,7 @@
 		};
 		848D9D3B1C9285EE00AD5670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E25415B9977735FA4544CE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZChat/Info.plist;
@@ -496,6 +573,7 @@
 				848D9D3B1C9285EE00AD5670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848D9D3C1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +582,7 @@
 				848D9D3E1C9285EE00AD5670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848D9D3F1C9285EE00AD5670 /* Build configuration list for PBXNativeTarget "LZChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +591,7 @@
 				848D9D411C9285EE00AD5670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
