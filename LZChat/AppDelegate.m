@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-#import <EaseMob.h>
-
+#import "LZLoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,8 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[EaseMob sharedInstance] registerSDKWithAppKey:EMAppKey apnsCertName:nil];
-    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    //如果使用美国站点，请加上这行代码 [AVOSCloud useAVCloudUS];
+    [AVOSCloud setApplicationId: kLeanCloudAppID
+                      clientKey:kLeanCloudAppKey];
+    // 跟踪应用的打开情况
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    UIWindow *window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor whiteColor];
+    self.window  = window;
+    
+    LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
+    
+    
+    self.window.rootViewController = loginVC;
+
     
     return YES;
 }
@@ -38,7 +49,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    [[EaseMob sharedInstance] applicationWillEnterForeground:application];
 
 }
 
@@ -48,7 +58,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:
-    [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
 
 @end

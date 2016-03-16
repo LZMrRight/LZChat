@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6102C2C9C06F607571D3E9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA2F2AFB7C2F544932EE56 /* libPods.a */; };
-		848834591C92BF3400661860 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848834581C92BF3400661860 /* LZLoginViewController.m */; };
 		848D9D111C9285ED00AD5670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D101C9285ED00AD5670 /* main.m */; };
 		848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D131C9285ED00AD5670 /* AppDelegate.m */; };
 		848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D181C9285ED00AD5670 /* Main.storyboard */; };
@@ -16,6 +15,12 @@
 		848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */; };
 		848D9D2A1C9285EE00AD5670 /* LZChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D291C9285EE00AD5670 /* LZChatTests.m */; };
 		848D9D351C9285EE00AD5670 /* LZChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D341C9285EE00AD5670 /* LZChatUITests.m */; };
+		848E5D961C98F5F7000157DE /* LZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848E5D941C98F5F7000157DE /* LZRegisterViewController.m */; };
+		848E5D971C98F5F7000157DE /* LZRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848E5D951C98F5F7000157DE /* LZRegisterViewController.xib */; };
+		84AE0D0C1C993AE7007A66D9 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE0D0B1C993AE7007A66D9 /* LZLoginViewController.m */; };
+		84AE0D101C993BE5007A66D9 /* LZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AE0D0F1C993BE5007A66D9 /* LZLoginViewController.xib */; };
+		84AE0D1B1C9952FF007A66D9 /* LZDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE0D1A1C9952FF007A66D9 /* LZDropdownMenu.m */; };
+		84AE0D201C995489007A66D9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE0D1F1C995489007A66D9 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +42,6 @@
 
 /* Begin PBXFileReference section */
 		50E25415B9977735FA4544CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		848834571C92BF3400661860 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
-		848834581C92BF3400661860 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
 		848D9D0C1C9285ED00AD5670 /* LZChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D101C9285ED00AD5670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		848D9D121C9285ED00AD5670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +57,16 @@
 		848D9D341C9285EE00AD5670 /* LZChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatUITests.m; sourceTree = "<group>"; };
 		848D9D361C9285EE00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848D9D431C929A6500AD5670 /* LZChat-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LZChat-PrefixHeader.pch"; sourceTree = "<group>"; };
+		848E5D931C98F5F7000157DE /* LZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterViewController.h; sourceTree = "<group>"; };
+		848E5D941C98F5F7000157DE /* LZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterViewController.m; sourceTree = "<group>"; };
+		848E5D951C98F5F7000157DE /* LZRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZRegisterViewController.xib; sourceTree = "<group>"; };
+		84AE0D0A1C993AE7007A66D9 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
+		84AE0D0B1C993AE7007A66D9 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
+		84AE0D0F1C993BE5007A66D9 /* LZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZLoginViewController.xib; sourceTree = "<group>"; };
+		84AE0D191C9952FF007A66D9 /* LZDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDropdownMenu.h; sourceTree = "<group>"; };
+		84AE0D1A1C9952FF007A66D9 /* LZDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDropdownMenu.m; sourceTree = "<group>"; };
+		84AE0D1E1C995489007A66D9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		84AE0D1F1C995489007A66D9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AA2F2AFB7C2F544932EE56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,8 +126,12 @@
 		848834541C92BF1D00661860 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				848834571C92BF3400661860 /* LZLoginViewController.h */,
-				848834581C92BF3400661860 /* LZLoginViewController.m */,
+				848E5D931C98F5F7000157DE /* LZRegisterViewController.h */,
+				848E5D941C98F5F7000157DE /* LZRegisterViewController.m */,
+				848E5D951C98F5F7000157DE /* LZRegisterViewController.xib */,
+				84AE0D0A1C993AE7007A66D9 /* LZLoginViewController.h */,
+				84AE0D0B1C993AE7007A66D9 /* LZLoginViewController.m */,
+				84AE0D0F1C993BE5007A66D9 /* LZLoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +146,8 @@
 		848834561C92BF1D00661860 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84AE0D191C9952FF007A66D9 /* LZDropdownMenu.h */,
+				84AE0D1A1C9952FF007A66D9 /* LZDropdownMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +177,7 @@
 		848D9D0E1C9285ED00AD5670 /* LZChat */ = {
 			isa = PBXGroup;
 			children = (
+				84AE0D1C1C99542F007A66D9 /* Other */,
 				848834521C92BED900661860 /* Classes */,
 				848D9D0F1C9285ED00AD5670 /* Supporting Files */,
 			);
@@ -175,6 +195,7 @@
 				848D9D201C9285ED00AD5670 /* Info.plist */,
 				848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */,
 				848D9D431C929A6500AD5670 /* LZChat-PrefixHeader.pch */,
+				84AE0D111C99420D007A66D9 /* images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,6 +216,30 @@
 				848D9D361C9285EE00AD5670 /* Info.plist */,
 			);
 			path = LZChatUITests;
+			sourceTree = "<group>";
+		};
+		84AE0D111C99420D007A66D9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		84AE0D1C1C99542F007A66D9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				84AE0D1D1C99544C007A66D9 /* Categrory */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		84AE0D1D1C99544C007A66D9 /* Categrory */ = {
+			isa = PBXGroup;
+			children = (
+				84AE0D1E1C995489007A66D9 /* UIView+Extension.h */,
+				84AE0D1F1C995489007A66D9 /* UIView+Extension.m */,
+			);
+			path = Categrory;
 			sourceTree = "<group>";
 		};
 		EFC3D3479E826051DC382D1A /* Pods */ = {
@@ -277,6 +322,7 @@
 				TargetAttributes = {
 					848D9D0B1C9285ED00AD5670 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 645DK53N5L;
 					};
 					848D9D241C9285EE00AD5670 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -314,8 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */,
+				84AE0D101C993BE5007A66D9 /* LZLoginViewController.xib in Resources */,
 				848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */,
 				848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */,
+				848E5D971C98F5F7000157DE /* LZRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +436,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AE0D201C995489007A66D9 /* UIView+Extension.m in Sources */,
+				84AE0D1B1C9952FF007A66D9 /* LZDropdownMenu.m in Sources */,
+				84AE0D0C1C993AE7007A66D9 /* LZLoginViewController.m in Sources */,
 				848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */,
+				848E5D961C98F5F7000157DE /* LZRegisterViewController.m in Sources */,
 				848D9D111C9285ED00AD5670 /* main.m in Sources */,
-				848834591C92BF3400661860 /* LZLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,12 +581,17 @@
 			baseConfigurationReference = 9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2852154b-65c3-436f-adc7-531b43aee7a2";
 			};
 			name = Debug;
 		};
@@ -544,12 +600,17 @@
 			baseConfigurationReference = 50E25415B9977735FA4544CE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2852154b-65c3-436f-adc7-531b43aee7a2";
 			};
 			name = Release;
 		};

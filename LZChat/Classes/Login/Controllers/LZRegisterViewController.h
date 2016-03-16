@@ -1,5 +1,5 @@
 //
-//  LZLoginViewController.h
+//  LZRegisterViewController.h
 //  LZChat
 //
 //  Created by Mr.Right on 16/3/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZLoginViewController : UIViewController
+@interface LZRegisterViewController : UIViewController
 
 @end

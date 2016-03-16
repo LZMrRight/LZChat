@@ -2,38 +2,103 @@
 //  LZLoginViewController.m
 //  LZChat
 //
-//  Created by Mr.Right on 16/3/11.
+//  Created by Mr.Right on 16/3/16.
 //  Copyright © 2016年 lizheng. All rights reserved.
 //
 
 #import "LZLoginViewController.h"
+#import "LZRegisterViewController.h"
+#import "LZDropdownMenu.h"
 
-@interface LZLoginViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *accountTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@interface LZLoginViewController () <UITextFieldDelegate>
+@property(nonatomic,strong) UITextField *forgetPasswordTextField;
+@property(nonatomic,strong) LZDropdownMenu *menu;
+@property(nonatomic,assign) CGRect keyBoardRect;
 @end
 
 @implementation LZLoginViewController
+static BOOL isKeyBoardShow = NO;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    // Do any additional setup after loading the view.
+
+  
 }
-- (IBAction)login:(UIButton *)sender {
-    EMError *error = nil;
+
+- (IBAction)registerIn:(UIButton *)sender {
+    LZRegisterViewController *registerVC = [[LZRegisterViewController alloc] init];
+    [self presentViewController:registerVC animated:YES completion:nil];
+}
+- (IBAction)forgetPassword:(id)sender {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    UIButton *button = (UIButton *)sender;
     
-    [[EaseMob sharedInstance].chatManager registerNewAccount:self.accountTextField.text password:self.passwordTextField.text error:&error];
-    if (!error) {
-        NSLog(@"登陆成功");
+    _forgetPasswordTextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 10, 100, 40)];
+    _forgetPasswordTextField.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    _forgetPasswordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _forgetPasswordTextField.placeholder = @"请输入注册邮箱";
+    _forgetPasswordTextField.delegate = self;
+    
+    _menu = [LZDropdownMenu menu];
+    [_menu setContent:_forgetPasswordTextField];
+    [_menu showFrom:button];
+}
+
+- (void)keyboardChangeFrame:(NSNotification *)no {
+    
+    isKeyBoardShow = YES;
+    
+    _keyBoardRect = [[[no userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    
+    if (isKeyBoardShow) {
+        [UIView animateWithDuration:1.f animations:^{
+            keyWindow.y -= _keyBoardRect.size.height;
+        }];
+        isKeyBoardShow = NO;
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    } else {
+        [UIView animateWithDuration:1.f animations:^{
+            keyWindow.y += _keyBoardRect.size.height;
+        }];
+        isKeyBoardShow = YES;
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
-
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (textField == self.forgetPasswordTextField) {
+        [self.menu dismiss];
+        [AVUser requestPasswordResetForEmailInBackground:textField.text block:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD showSuccessWithStatus:@"请去邮箱验证"];
+                });
+            } else {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD showErrorWithStatus:@"请输入正确的邮箱"];
+                });
+            }
+        }];
+    }
+    
+    return  YES;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+    [self.menu dismiss];
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+
+    if (isKeyBoardShow) {
+        [UIView animateWithDuration:1.f animations:^{
+            keyWindow.y -= _keyBoardRect.size.height;
+        }];
+        isKeyBoardShow = NO;
+    }
 }
 
 /*

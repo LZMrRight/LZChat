@@ -13,11 +13,27 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
-#import <EaseMob.h>
-
+#import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudIM.h>
+#import <SVProgressHUD.h>
+#import "UIView+Extension.h"
 /**
  *  宏定义
  */
 #define EMAppKey @"lzchat#lzchat"
+#define kLeanCloudAppID         @"f6xusfssLCRUI13ljw3IomDE"
+#define kLeanCloudAppKey        @"zG3QBG2U5dD3fpr4aOmBUEaF"
+#define kLeanCloudMasterKey     @"HDsWsPlHc9au6QknOfJ3opRn"
+
+
+// 自定义Log
+#ifdef DEBUG
+
+#define LZLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+#else
+#define LZLog(...)
+
+#endif
 
 #endif /* LZChat_PrefixHeader_pch */
