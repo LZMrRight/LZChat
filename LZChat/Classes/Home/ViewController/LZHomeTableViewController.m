@@ -29,6 +29,7 @@
 
 - (void)changeAccount {
     self.view.window.rootViewController = [[LZLoginViewController alloc]init];
+    [AVUser logOut];  //清除缓存用户对象
 }
 
 #pragma mark - Table view data source

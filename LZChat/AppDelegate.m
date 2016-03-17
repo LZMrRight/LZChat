@@ -10,6 +10,7 @@
 #import "LZLoginViewController.h"
 #import <UMSocial.h>
 #import <UMSocialSinaSSOHandler.h>
+#import "LZTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,17 +21,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    UIWindow *window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor whiteColor];
+    self.window  = window;
+
     //如果使用美国站点，请加上这行代码 [AVOSCloud useAVCloudUS];
     [AVOSCloud setApplicationId: kLeanCloudAppID
                       clientKey:kLeanCloudAppKey];
     // 跟踪应用的打开情况
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    UIWindow *window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
-    window.backgroundColor = [UIColor whiteColor];
-    self.window  = window;
-    LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
-    self.window.rootViewController = loginVC;
+    // 切换合适的主窗口
+    AVUser *user =  [AVUser currentUser];
+    if (user) {
+        self.window.rootViewController = [[LZTabBarController alloc]init];
+    } else {
+        self.window.rootViewController = [[LZLoginViewController alloc] init];;
+    }
     
     // 配置 HUD
     [self configHUD];
