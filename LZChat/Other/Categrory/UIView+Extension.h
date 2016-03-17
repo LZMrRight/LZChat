@@ -1,10 +1,11 @@
 //
 //  UIView+Extension.h
-//  黑马微博2期
+//  LZChat
 //
-//  Created by apple on 14-10-7.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by Mr.Right on 16/3/17.
+//  Copyright © 2016年 lizheng. All rights reserved.
 //
+
 
 #import <UIKit/UIKit.h>
 

@@ -36,6 +36,8 @@
         AVUser *user = [AVUser user];
         user.username = self.accountLabel.text;
         user.password = self.passwordLabel.text;
+        [[AVUser currentUser] setObject:user.username forKey:@"userName"];
+        [[AVUser currentUser] saveInBackground];
         user.email = self.emailLabel.text;
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
@@ -43,7 +45,7 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             } else {
                 if (error.code == 202) {
-                    [SVProgressHUD showErrorWithStatus:@"账号有邮箱已经注册过"];
+                    [SVProgressHUD showErrorWithStatus:@"账号或者邮箱已经注册过"];
                 }
                 LZLog(@"注册注册失败:%@", error);
             }

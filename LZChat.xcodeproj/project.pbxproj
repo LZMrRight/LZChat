@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6102C2C9C06F607571D3E9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA2F2AFB7C2F544932EE56 /* libPods.a */; };
+		841D83A11C9AA1200098B207 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D83A01C9AA1200098B207 /* UIBarButtonItem+Extension.m */; };
+		847C748F1C9A55A200805195 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74881C9A55A200805195 /* SVIndefiniteAnimatedView.m */; };
+		847C74901C9A55A200805195 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 847C748A1C9A55A200805195 /* SVProgressHUD.bundle */; };
+		847C74911C9A55A200805195 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C748C1C9A55A200805195 /* SVProgressHUD.m */; };
+		847C74921C9A55A200805195 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C748E1C9A55A200805195 /* SVRadialGradientLayer.m */; };
+		847C74991C9A5CB700805195 /* LZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74981C9A5CB700805195 /* LZTabBarController.m */; };
+		847C749C1C9A5D3500805195 /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C749B1C9A5D3500805195 /* LZNavigationController.m */; };
+		847C74A71C9A5E2300805195 /* LZHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74A61C9A5E2300805195 /* LZHomeTableViewController.m */; };
+		847C74AA1C9A5E3D00805195 /* LZMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74A91C9A5E3D00805195 /* LZMeTableViewController.m */; };
 		848D9D111C9285ED00AD5670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D101C9285ED00AD5670 /* main.m */; };
 		848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D131C9285ED00AD5670 /* AppDelegate.m */; };
 		848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D181C9285ED00AD5670 /* Main.storyboard */; };
@@ -42,6 +51,24 @@
 
 /* Begin PBXFileReference section */
 		50E25415B9977735FA4544CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		841D839F1C9AA1200098B207 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		841D83A01C9AA1200098B207 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		847C74871C9A55A200805195 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		847C74881C9A55A200805195 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		847C74891C9A55A200805195 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		847C748A1C9A55A200805195 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		847C748B1C9A55A200805195 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		847C748C1C9A55A200805195 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		847C748D1C9A55A200805195 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		847C748E1C9A55A200805195 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		847C74971C9A5CB700805195 /* LZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTabBarController.h; sourceTree = "<group>"; };
+		847C74981C9A5CB700805195 /* LZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBarController.m; sourceTree = "<group>"; };
+		847C749A1C9A5D3500805195 /* LZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNavigationController.h; sourceTree = "<group>"; };
+		847C749B1C9A5D3500805195 /* LZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNavigationController.m; sourceTree = "<group>"; };
+		847C74A51C9A5E2300805195 /* LZHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeTableViewController.h; sourceTree = "<group>"; };
+		847C74A61C9A5E2300805195 /* LZHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeTableViewController.m; sourceTree = "<group>"; };
+		847C74A81C9A5E3D00805195 /* LZMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMeTableViewController.h; sourceTree = "<group>"; };
+		847C74A91C9A5E3D00805195 /* LZMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMeTableViewController.m; sourceTree = "<group>"; };
 		848D9D0C1C9285ED00AD5670 /* LZChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D101C9285ED00AD5670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		848D9D121C9285ED00AD5670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,9 +132,136 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		847C74851C9A556D00805195 /* ThiredLib */ = {
+			isa = PBXGroup;
+			children = (
+				847C74861C9A55A200805195 /* SVProgressHUD */,
+			);
+			path = ThiredLib;
+			sourceTree = "<group>";
+		};
+		847C74861C9A55A200805195 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				847C74871C9A55A200805195 /* SVIndefiniteAnimatedView.h */,
+				847C74881C9A55A200805195 /* SVIndefiniteAnimatedView.m */,
+				847C74891C9A55A200805195 /* SVProgressHUD-Prefix.pch */,
+				847C748A1C9A55A200805195 /* SVProgressHUD.bundle */,
+				847C748B1C9A55A200805195 /* SVProgressHUD.h */,
+				847C748C1C9A55A200805195 /* SVProgressHUD.m */,
+				847C748D1C9A55A200805195 /* SVRadialGradientLayer.h */,
+				847C748E1C9A55A200805195 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		847C74931C9A5C4A00805195 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				847C74941C9A5C7F00805195 /* Model */,
+				847C74951C9A5C7F00805195 /* View */,
+				847C74961C9A5C7F00805195 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		847C74941C9A5C7F00805195 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		847C74951C9A5C7F00805195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		847C74961C9A5C7F00805195 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				847C74971C9A5CB700805195 /* LZTabBarController.h */,
+				847C74981C9A5CB700805195 /* LZTabBarController.m */,
+				847C749A1C9A5D3500805195 /* LZNavigationController.h */,
+				847C749B1C9A5D3500805195 /* LZNavigationController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		847C749D1C9A5DE100805195 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				847C749E1C9A5DE100805195 /* Model */,
+				847C749F1C9A5DE100805195 /* View */,
+				847C74A01C9A5DE100805195 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		847C749E1C9A5DE100805195 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		847C749F1C9A5DE100805195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		847C74A01C9A5DE100805195 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				847C74A51C9A5E2300805195 /* LZHomeTableViewController.h */,
+				847C74A61C9A5E2300805195 /* LZHomeTableViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		847C74A11C9A5DE100805195 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				847C74A21C9A5DE100805195 /* Model */,
+				847C74A31C9A5DE100805195 /* View */,
+				847C74A41C9A5DE100805195 /* ViewController */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		847C74A21C9A5DE100805195 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		847C74A31C9A5DE100805195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		847C74A41C9A5DE100805195 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				847C74A81C9A5E3D00805195 /* LZMeTableViewController.h */,
+				847C74A91C9A5E3D00805195 /* LZMeTableViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		848834521C92BED900661860 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				847C749D1C9A5DE100805195 /* Home */,
+				847C74A11C9A5DE100805195 /* Me */,
+				847C74931C9A5C4A00805195 /* Main */,
 				848834531C92BF1D00661860 /* Login */,
 			);
 			path = Classes;
@@ -228,6 +382,7 @@
 		84AE0D1C1C99542F007A66D9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				847C74851C9A556D00805195 /* ThiredLib */,
 				84AE0D1D1C99544C007A66D9 /* Categrory */,
 			);
 			path = Other;
@@ -236,6 +391,8 @@
 		84AE0D1D1C99544C007A66D9 /* Categrory */ = {
 			isa = PBXGroup;
 			children = (
+				841D839F1C9AA1200098B207 /* UIBarButtonItem+Extension.h */,
+				841D83A01C9AA1200098B207 /* UIBarButtonItem+Extension.m */,
 				84AE0D1E1C995489007A66D9 /* UIView+Extension.h */,
 				84AE0D1F1C995489007A66D9 /* UIView+Extension.m */,
 			);
@@ -360,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */,
+				847C74901C9A55A200805195 /* SVProgressHUD.bundle in Resources */,
 				84AE0D101C993BE5007A66D9 /* LZLoginViewController.xib in Resources */,
 				848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */,
 				848D9D1A1C9285ED00AD5670 /* Main.storyboard in Resources */,
@@ -437,10 +595,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AE0D201C995489007A66D9 /* UIView+Extension.m in Sources */,
+				847C74921C9A55A200805195 /* SVRadialGradientLayer.m in Sources */,
+				847C74911C9A55A200805195 /* SVProgressHUD.m in Sources */,
+				847C74991C9A5CB700805195 /* LZTabBarController.m in Sources */,
+				847C74A71C9A5E2300805195 /* LZHomeTableViewController.m in Sources */,
+				847C74AA1C9A5E3D00805195 /* LZMeTableViewController.m in Sources */,
 				84AE0D1B1C9952FF007A66D9 /* LZDropdownMenu.m in Sources */,
 				84AE0D0C1C993AE7007A66D9 /* LZLoginViewController.m in Sources */,
+				841D83A11C9AA1200098B207 /* UIBarButtonItem+Extension.m in Sources */,
 				848D9D141C9285ED00AD5670 /* AppDelegate.m in Sources */,
 				848E5D961C98F5F7000157DE /* LZRegisterViewController.m in Sources */,
+				847C749C1C9A5D3500805195 /* LZNavigationController.m in Sources */,
+				847C748F1C9A55A200805195 /* SVIndefiniteAnimatedView.m in Sources */,
 				848D9D111C9285ED00AD5670 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
@@ -601,7 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;

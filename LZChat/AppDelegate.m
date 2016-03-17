@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LZLoginViewController.h"
+#import <UMSocial.h>
+#import <UMSocialSinaSSOHandler.h>
 @interface AppDelegate ()
 
 @end
@@ -27,14 +29,26 @@
     UIWindow *window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
     window.backgroundColor = [UIColor whiteColor];
     self.window  = window;
-    
     LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
-    
-    
     self.window.rootViewController = loginVC;
-
     
+    // 配置 HUD
+    [self configHUD];
+    
+    // 配置友盟
+    [self configUmen];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result) {
+        if (result == FALSE) {
+            LZLog(@"result:%d",result);
+        }
+    }
+    
+    return result;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -58,6 +72,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:
+}
+
+#pragma mark 私有方法
+- (void)configHUD {
+    [SVProgressHUD setDefaultMaskType:(SVProgressHUDMaskTypeClear)];
+//    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultAnimationType:(SVProgressHUDAnimationTypeNative)];
+}
+
+- (void)configUmen {
+    [UMSocialData setAppKey:kUmenAppkey];
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:kSinaAppkey secret:kSinaAppSecret RedirectURL:kSinaRedirectURL];
 }
 
 @end

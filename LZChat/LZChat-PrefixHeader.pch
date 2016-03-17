@@ -15,7 +15,7 @@
 #import <UIImageView+WebCache.h>
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM.h>
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "UIView+Extension.h"
 /**
  *  宏定义
@@ -24,6 +24,13 @@
 #define kLeanCloudAppID         @"f6xusfssLCRUI13ljw3IomDE"
 #define kLeanCloudAppKey        @"zG3QBG2U5dD3fpr4aOmBUEaF"
 #define kLeanCloudMasterKey     @"HDsWsPlHc9au6QknOfJ3opRn"
+// 新浪
+#define kSinaAppSecret          @"20b868c8552510a2fbf1381d11c823c0"
+#define kSinaAppkey             @"983447703"
+#define kSinaRedirectURL             @"http://baidu.com"
+
+// 友盟
+#define kUmenAppkey             @"56ea46b4e0f55ab3b900020f"
 
 
 // 自定义Log
