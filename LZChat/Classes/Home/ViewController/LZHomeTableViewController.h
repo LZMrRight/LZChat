@@ -2,7 +2,7 @@
 //  LZHomeTableViewController.h
 //  LZChat
 //
-//  Created by Mr.Right on 16/3/17.
+//  Created by Mr.Right on 16/3/22.
 //  Copyright © 2016年 lizheng. All rights reserved.
 //
 

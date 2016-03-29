@@ -27,10 +27,13 @@
 // 新浪
 #define kSinaAppSecret          @"20b868c8552510a2fbf1381d11c823c0"
 #define kSinaAppkey             @"983447703"
-#define kSinaRedirectURL             @"http://baidu.com"
+#define kSinaRedirectURL        @"http://baidu.com"
 
 // 友盟
 #define kUmenAppkey             @"56ea46b4e0f55ab3b900020f"
+
+
+#define iSReceiveMessageBYSelf NO
 
 
 // 自定义Log

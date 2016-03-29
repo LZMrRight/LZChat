@@ -189,13 +189,18 @@ static BOOL isKeyBoardShow = NO;
                             }
                         }];
                     } else { // 第三方登陆失败
-                        [SVProgressHUD showErrorWithStatus:@"登陆失败"];
-                        LZLog(@"注册失败:%@", error);
+                        [SVProgressHUD showErrorWithStatus:@"登陆失败"]; 
+                        LZLog(@"第三方登陆失败:%@", error);
                     }
                 }
             }];
         } else {
             [SVProgressHUD showErrorWithStatus:@"登陆失败"];
+            // 清楚新浪缓存
+            [[UMSocialDataService defaultDataService] requestUnOauthWithType:UMShareToSina  completion:^(UMSocialResponseEntity *response){
+                LZLog(@"清除新浪缓存用户response is %@",response);
+            }];
+            
             LZLog(@"注册失败:%u", response.responseCode);
         }
     });

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6102C2C9C06F607571D3E9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA2F2AFB7C2F544932EE56 /* libPods.a */; };
+		8400987F1CAA184400E1E8B7 /* LZPlayerForRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8400987C1CAA184400E1E8B7 /* LZPlayerForRecorder.m */; };
+		840098801CAA184400E1E8B7 /* LZRecorderTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8400987E1CAA184400E1E8B7 /* LZRecorderTool.m */; };
+		840098841CAA185E00E1E8B7 /* LZSingleChatTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 840098831CAA185E00E1E8B7 /* LZSingleChatTool.m */; };
+		840098861CAA263800E1E8B7 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 840098851CAA263800E1E8B7 /* music.mp3 */; };
 		841D83B51C9AB5D30098B207 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D83A41C9AB5D30098B207 /* AppDelegate.m */; };
 		841D83B61C9AB5D30098B207 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D83A71C9AB5D30098B207 /* UIBarButtonItem+Extension.m */; };
 		841D83B71C9AB5D30098B207 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D83A91C9AB5D30098B207 /* UIView+Extension.m */; };
@@ -21,14 +25,18 @@
 		847C74A71C9A5E2300805195 /* LZHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74A61C9A5E2300805195 /* LZHomeTableViewController.m */; };
 		847C74AA1C9A5E3D00805195 /* LZMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C74A91C9A5E3D00805195 /* LZMeTableViewController.m */; };
 		848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D1B1C9285ED00AD5670 /* Assets.xcassets */; };
-		848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */; };
 		848D9D2A1C9285EE00AD5670 /* LZChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D291C9285EE00AD5670 /* LZChatTests.m */; };
 		848D9D351C9285EE00AD5670 /* LZChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9D341C9285EE00AD5670 /* LZChatUITests.m */; };
 		848E5D961C98F5F7000157DE /* LZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848E5D941C98F5F7000157DE /* LZRegisterViewController.m */; };
 		848E5D971C98F5F7000157DE /* LZRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848E5D951C98F5F7000157DE /* LZRegisterViewController.xib */; };
+		84A21F1F1CA29438006599BE /* LZSingleChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A21F1D1CA29438006599BE /* LZSingleChatViewController.m */; };
+		84A21F231CA29442006599BE /* LZSingleChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A21F221CA29442006599BE /* LZSingleChatTableViewCell.m */; };
+		84A21F261CA2944A006599BE /* SingleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A21F251CA2944A006599BE /* SingleMessage.m */; };
 		84AE0D0C1C993AE7007A66D9 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE0D0B1C993AE7007A66D9 /* LZLoginViewController.m */; };
 		84AE0D101C993BE5007A66D9 /* LZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AE0D0F1C993BE5007A66D9 /* LZLoginViewController.xib */; };
 		84AE0D1B1C9952FF007A66D9 /* LZDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE0D1A1C9952FF007A66D9 /* LZDropdownMenu.m */; };
+		84B46F9E1CA29BEC00B563A9 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B46F9D1CA29BEC00B563A9 /* messages.plist */; };
+		84CFCBA01CA2D81800913231 /* LZSingleChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CFCB9F1CA2D81800913231 /* LZSingleChatViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,13 @@
 
 /* Begin PBXFileReference section */
 		50E25415B9977735FA4544CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8400987B1CAA184400E1E8B7 /* LZPlayerForRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlayerForRecorder.h; sourceTree = "<group>"; };
+		8400987C1CAA184400E1E8B7 /* LZPlayerForRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlayerForRecorder.m; sourceTree = "<group>"; };
+		8400987D1CAA184400E1E8B7 /* LZRecorderTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRecorderTool.h; sourceTree = "<group>"; };
+		8400987E1CAA184400E1E8B7 /* LZRecorderTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRecorderTool.m; sourceTree = "<group>"; };
+		840098821CAA185E00E1E8B7 /* LZSingleChatTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSingleChatTool.h; sourceTree = "<group>"; };
+		840098831CAA185E00E1E8B7 /* LZSingleChatTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSingleChatTool.m; sourceTree = "<group>"; };
+		840098851CAA263800E1E8B7 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		841D83A31C9AB5D30098B207 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		841D83A41C9AB5D30098B207 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		841D83A61C9AB5D30098B207 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -75,7 +90,6 @@
 		847C74A91C9A5E3D00805195 /* LZMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMeTableViewController.m; sourceTree = "<group>"; };
 		848D9D0C1C9285ED00AD5670 /* LZChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D1B1C9285ED00AD5670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		848D9D1E1C9285ED00AD5670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848D9D201C9285ED00AD5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848D9D251C9285EE00AD5670 /* LZChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D9D291C9285EE00AD5670 /* LZChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZChatTests.m; sourceTree = "<group>"; };
@@ -87,11 +101,19 @@
 		848E5D931C98F5F7000157DE /* LZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterViewController.h; sourceTree = "<group>"; };
 		848E5D941C98F5F7000157DE /* LZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterViewController.m; sourceTree = "<group>"; };
 		848E5D951C98F5F7000157DE /* LZRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZRegisterViewController.xib; sourceTree = "<group>"; };
+		84A21F1C1CA29438006599BE /* LZSingleChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSingleChatViewController.h; sourceTree = "<group>"; };
+		84A21F1D1CA29438006599BE /* LZSingleChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSingleChatViewController.m; sourceTree = "<group>"; };
+		84A21F211CA29442006599BE /* LZSingleChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSingleChatTableViewCell.h; sourceTree = "<group>"; };
+		84A21F221CA29442006599BE /* LZSingleChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSingleChatTableViewCell.m; sourceTree = "<group>"; };
+		84A21F241CA2944A006599BE /* SingleMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleMessage.h; sourceTree = "<group>"; };
+		84A21F251CA2944A006599BE /* SingleMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleMessage.m; sourceTree = "<group>"; };
 		84AE0D0A1C993AE7007A66D9 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
 		84AE0D0B1C993AE7007A66D9 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
 		84AE0D0F1C993BE5007A66D9 /* LZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZLoginViewController.xib; sourceTree = "<group>"; };
 		84AE0D191C9952FF007A66D9 /* LZDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDropdownMenu.h; sourceTree = "<group>"; };
 		84AE0D1A1C9952FF007A66D9 /* LZDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDropdownMenu.m; sourceTree = "<group>"; };
+		84B46F9D1CA29BEC00B563A9 /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
+		84CFCB9F1CA2D81800913231 /* LZSingleChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LZSingleChatViewController.storyboard; path = LZChat/Classes/Home/ViewController/LZSingleChatViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AA2F2AFB7C2F544932EE56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,13 +152,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8400987A1CAA184400E1E8B7 /* LZPlayerAndRecoder */ = {
+			isa = PBXGroup;
+			children = (
+				8400987B1CAA184400E1E8B7 /* LZPlayerForRecorder.h */,
+				8400987C1CAA184400E1E8B7 /* LZPlayerForRecorder.m */,
+				8400987D1CAA184400E1E8B7 /* LZRecorderTool.h */,
+				8400987E1CAA184400E1E8B7 /* LZRecorderTool.m */,
+			);
+			path = LZPlayerAndRecoder;
+			sourceTree = "<group>";
+		};
+		840098811CAA185E00E1E8B7 /* LZSingleChatTool */ = {
+			isa = PBXGroup;
+			children = (
+				840098821CAA185E00E1E8B7 /* LZSingleChatTool.h */,
+				840098831CAA185E00E1E8B7 /* LZSingleChatTool.m */,
+			);
+			path = LZSingleChatTool;
+			sourceTree = "<group>";
+		};
 		841D83A21C9AB5D30098B207 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				841D83A31C9AB5D30098B207 /* AppDelegate.h */,
 				841D83A41C9AB5D30098B207 /* AppDelegate.m */,
-				841D83A51C9AB5D30098B207 /* Categrory */,
 				841D83AA1C9AB5D30098B207 /* main.m */,
+				84E774481CA50B9C0063BBF9 /* Tool */,
+				841D83A51C9AB5D30098B207 /* Categrory */,
 				841D83AB1C9AB5D30098B207 /* ThiredLib */,
 			);
 			path = Other;
@@ -225,6 +268,8 @@
 		847C749E1C9A5DE100805195 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84A21F241CA2944A006599BE /* SingleMessage.h */,
+				84A21F251CA2944A006599BE /* SingleMessage.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +277,9 @@
 		847C749F1C9A5DE100805195 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84A21F211CA29442006599BE /* LZSingleChatTableViewCell.h */,
+				84A21F221CA29442006599BE /* LZSingleChatTableViewCell.m */,
+				84CFCB9F1CA2D81800913231 /* LZSingleChatViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +287,8 @@
 		847C74A01C9A5DE100805195 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84A21F1C1CA29438006599BE /* LZSingleChatViewController.h */,
+				84A21F1D1CA29438006599BE /* LZSingleChatViewController.m */,
 				847C74A51C9A5E2300805195 /* LZHomeTableViewController.h */,
 				847C74A61C9A5E2300805195 /* LZHomeTableViewController.m */,
 			);
@@ -364,8 +414,9 @@
 			children = (
 				848D9D1B1C9285ED00AD5670 /* Assets.xcassets */,
 				848D9D201C9285ED00AD5670 /* Info.plist */,
-				848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */,
+				84B46F9D1CA29BEC00B563A9 /* messages.plist */,
 				848D9D431C929A6500AD5670 /* LZChat-PrefixHeader.pch */,
+				840098851CAA263800E1E8B7 /* music.mp3 */,
 				84AE0D111C99420D007A66D9 /* images */,
 			);
 			name = "Supporting Files";
@@ -394,6 +445,15 @@
 			children = (
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		84E774481CA50B9C0063BBF9 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				840098811CAA185E00E1E8B7 /* LZSingleChatTool */,
+				8400987A1CAA184400E1E8B7 /* LZPlayerAndRecoder */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		EFC3D3479E826051DC382D1A /* Pods */ = {
@@ -476,7 +536,7 @@
 				TargetAttributes = {
 					848D9D0B1C9285ED00AD5670 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 645DK53N5L;
+						DevelopmentTeam = G9GWY6T6FF;
 					};
 					848D9D241C9285EE00AD5670 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -514,10 +574,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				841D83BA1C9AB5D30098B207 /* SVProgressHUD.bundle in Resources */,
-				848D9D1F1C9285ED00AD5670 /* LaunchScreen.storyboard in Resources */,
 				84AE0D101C993BE5007A66D9 /* LZLoginViewController.xib in Resources */,
+				84B46F9E1CA29BEC00B563A9 /* messages.plist in Resources */,
 				848D9D1C1C9285ED00AD5670 /* Assets.xcassets in Resources */,
+				840098861CAA263800E1E8B7 /* music.mp3 in Resources */,
 				848E5D971C98F5F7000157DE /* LZRegisterViewController.xib in Resources */,
+				84CFCBA01CA2D81800913231 /* LZSingleChatViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,18 +653,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				841D83B71C9AB5D30098B207 /* UIView+Extension.m in Sources */,
+				840098801CAA184400E1E8B7 /* LZRecorderTool.m in Sources */,
+				84A21F231CA29442006599BE /* LZSingleChatTableViewCell.m in Sources */,
 				847C74991C9A5CB700805195 /* LZTabBarController.m in Sources */,
 				847C74A71C9A5E2300805195 /* LZHomeTableViewController.m in Sources */,
+				84A21F261CA2944A006599BE /* SingleMessage.m in Sources */,
 				847C74AA1C9A5E3D00805195 /* LZMeTableViewController.m in Sources */,
 				84AE0D1B1C9952FF007A66D9 /* LZDropdownMenu.m in Sources */,
 				841D83B51C9AB5D30098B207 /* AppDelegate.m in Sources */,
 				84AE0D0C1C993AE7007A66D9 /* LZLoginViewController.m in Sources */,
 				841D83BC1C9AB5D30098B207 /* SVRadialGradientLayer.m in Sources */,
+				840098841CAA185E00E1E8B7 /* LZSingleChatTool.m in Sources */,
 				841D83B61C9AB5D30098B207 /* UIBarButtonItem+Extension.m in Sources */,
 				848E5D961C98F5F7000157DE /* LZRegisterViewController.m in Sources */,
 				841D83BB1C9AB5D30098B207 /* SVProgressHUD.m in Sources */,
+				84A21F1F1CA29438006599BE /* LZSingleChatViewController.m in Sources */,
 				841D83B81C9AB5D30098B207 /* main.m in Sources */,
 				847C749C1C9A5D3500805195 /* LZNavigationController.m in Sources */,
+				8400987F1CAA184400E1E8B7 /* LZPlayerForRecorder.m in Sources */,
 				841D83B91C9AB5D30098B207 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,17 +705,6 @@
 			targetProxy = 848D9D311C9285EE00AD5670 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		848D9D1D1C9285ED00AD5670 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				848D9D1E1C9285ED00AD5670 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		848D9D371C9285EE00AD5670 /* Debug */ = {
@@ -735,17 +792,19 @@
 			baseConfigurationReference = 9E3E618338FBC6944A7F90B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2852154b-65c3-436f-adc7-531b43aee7a2";
+				PROVISIONING_PROFILE = "cbb74c97-f9ee-4eff-b477-7310ad85f412";
 			};
 			name = Debug;
 		};
@@ -754,17 +813,19 @@
 			baseConfigurationReference = 50E25415B9977735FA4544CE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZChat/LZChat-PrefixHeader.pch";
 				INFOPLIST_FILE = LZChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2852154b-65c3-436f-adc7-531b43aee7a2";
+				PROVISIONING_PROFILE = "cbb74c97-f9ee-4eff-b477-7310ad85f412";
 			};
 			name = Release;
 		};

@@ -28,12 +28,24 @@
 				<string>wb983447703</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>MyAppText</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>MyAppText</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>weibosdk2.5</string>
 		<string>weibosdk</string>
+		<string>sinaweibohd</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -42,10 +54,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -22,8 +22,8 @@
     // Do any additional setup after loading the view.
     [super viewDidLoad];
     
-    // 添加子控制器
-    [self setupChildVc:[[LZHomeTableViewController alloc] init] title:@"首页" image:@"tabbar_useralhome" selectedImage:@"tabbar_useralhome_click"];
+    // 添加子控制器    
+    [self setupChildVc: [[LZHomeTableViewController alloc]init] title:@"首页" image:@"tabbar_useralhome" selectedImage:@"tabbar_useralhome_click"];
     
     [self setupChildVc:[[LZMeTableViewController alloc] init] title:@"我" image:@"tabbar_me" selectedImage:@"tabbar_me_click"];
 

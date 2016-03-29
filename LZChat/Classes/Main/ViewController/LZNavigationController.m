@@ -8,7 +8,7 @@
 
 #import "LZNavigationController.h"
 
-@interface LZNavigationController ()
+@interface LZNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -29,6 +29,7 @@
     [super viewDidLoad];
     
     //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 /**
@@ -61,6 +62,8 @@
     // 这句super的push要放在后面, 让viewController可以覆盖上面设置的leftBarButtonItem
     [super pushViewController:viewController animated:animated];
     
+    // push 的时候禁止交互
+    self.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)back
@@ -68,7 +71,13 @@
     [self popViewControllerAnimated:YES];
 }
 
-
+#pragma mark - 解决策划手势问题
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (self.viewControllers.count <= 1) {
+        return NO;
+    }
+    return YES;
+}
 /*
 #pragma mark - Navigation
 
