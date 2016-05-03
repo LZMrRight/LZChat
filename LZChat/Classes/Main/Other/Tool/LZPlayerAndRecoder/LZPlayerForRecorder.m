@@ -35,7 +35,7 @@
         NSData *audioData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_filePath]];
         //将数据保存到本地指定位置
         NSString *docDirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        NSString *filePath = [NSString stringWithFormat:@"%@/%@.mp3", docDirPath , @"temp"];
+        NSString *filePath = [NSString stringWithFormat:@"%@/%@.wav", docDirPath , @"temp"];
         [audioData writeToFile:filePath atomically:YES];
         NSURL *fileURL = [NSURL fileURLWithPath:filePath];
 

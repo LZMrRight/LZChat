@@ -87,12 +87,9 @@
         NSString *chatName = [NSString stringWithFormat:@"%@ 与 %@",_clientName,contact]; // 聊天名
         [self.client createConversationWithName:chatName clientIds:@[contact] callback:^(AVIMConversation *conversation, NSError *error) {
             // Tom 发了一首歌曲给 Jerry
-//            AVFile *file = [AVFile fileWithURL:@"http://ac-lhzo7z96.clouddn.com/1427444393952"];
-//            AVIMAudioMessage *message = [AVIMAudioMessage messageWithText:@"听听人类的神曲~" file:file attributes:nil];
-            NSString *path = [[NSBundle mainBundle] pathForResource:@"music" ofType:@"mp3"];
-            AVFile *file = [AVFile fileWithName:@"music.mp3" contentsAtPath:path];
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"20162429042439" ofType:@"wav"];
+            AVFile *file = [AVFile fileWithName:@"20162429042439.wav" contentsAtPath:path];
             AVIMAudioMessage *audio = [AVIMAudioMessage messageWithText:message file: file attributes:@{@"type":type}];
-            
             [conversation sendMessage:audio callback:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
                     LZLog(@"发送成功!");

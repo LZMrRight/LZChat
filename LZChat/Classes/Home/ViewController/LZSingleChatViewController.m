@@ -16,6 +16,10 @@
 #import "LZRecorderTool.h"
 #import "LZPlayerForRecorder.h"
 
+#import <WebKit/WebKit.h>
+
+#import <objc/runtime.h>
+
 @interface LZSingleChatViewController () <AVIMClientDelegate,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UIGestureRecognizerDelegate>
 @property(nonatomic,strong) NSMutableArray *dataSource;
 @property(nonatomic,strong) LZSingleChatTool *singleChatTool;
@@ -95,6 +99,10 @@ static NSString *me = @"me";
     [self.dataSource addObject:message];
     [self.tableView reloadData];
     
+    [self performSelector:@selector(reload) withObject:self afterDelay:0.5f];
+}
+
+- (void)reload {
     [self.tableView scrollToRowAtIndexPath: [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 /**
@@ -170,6 +178,7 @@ static NSString *me = @"me";
     } else if ([message.attributes[@"type"] isEqualToString:@"audio"]) {
         [self createDataSourceWithTextMessage:message.text andType:@"1"];
         self.player.filePath = message.file.url;
+        LZLog(@"%@", message.file.url);
         [self.player startPlay];
     }
 }
@@ -293,17 +302,5 @@ static NSString *me = @"me";
     }
     return _dataSource;
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
