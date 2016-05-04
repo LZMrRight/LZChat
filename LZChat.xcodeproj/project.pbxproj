@@ -814,9 +814,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR..;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbb74c97-f9ee-4eff-b477-7310ad85f412";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -835,9 +835,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MR.com.LZChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MR..;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbb74c97-f9ee-4eff-b477-7310ad85f412";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

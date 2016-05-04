@@ -70,7 +70,7 @@ static NSString *cellIDE = @"homeCell";
     
     UIStoryboard *homeStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([LZSingleChatViewController class]) bundle:[NSBundle mainBundle]];
     LZSingleChatViewController *singleChatVC = [homeStoryBoard instantiateViewControllerWithIdentifier:@"LZSingleChatViewController"];
-
+    
     [self.navigationController pushViewController:singleChatVC animated:YES];
 }
 

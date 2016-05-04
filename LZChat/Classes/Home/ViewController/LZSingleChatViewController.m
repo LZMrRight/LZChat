@@ -16,10 +16,6 @@
 #import "LZRecorderTool.h"
 #import "LZPlayerForRecorder.h"
 
-#import <WebKit/WebKit.h>
-
-#import <objc/runtime.h>
-
 @interface LZSingleChatViewController () <AVIMClientDelegate,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UIGestureRecognizerDelegate>
 @property(nonatomic,strong) NSMutableArray *dataSource;
 @property(nonatomic,strong) LZSingleChatTool *singleChatTool;
@@ -35,17 +31,18 @@
 @end
 
 @implementation LZSingleChatViewController
-static NSString *other = @"other";
-static NSString *me = @"me";
+static NSString * const other = @"other";
+static NSString * const me = @"me";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // 监听键盘
     self.messageTextField.delegate = self;
+
+    // 监听键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     // 初始化
     [self congigInitial];
     
@@ -98,28 +95,13 @@ static NSString *me = @"me";
 
     [self.dataSource addObject:message];
     [self.tableView reloadData];
+    [self scrollCell];
     
-    [self performSelector:@selector(reload) withObject:self afterDelay:0.5f];
 }
 
-- (void)reload {
-    [self.tableView scrollToRowAtIndexPath: [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-}
-/**
- *  加载基础数据
- */
-- (void)createDataSource1 {
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@"plist"];
-    NSArray *plistArr = [NSArray arrayWithContentsOfFile:plistPath];
-    
-    SingleMessage *message = nil;
-    for (NSDictionary *subDic in plistArr) {
-        SingleMessage *singleMessage = [[SingleMessage alloc]init];
-        [singleMessage setValuesForKeysWithDictionary:subDic];
-        singleMessage.hideTime  = ([singleMessage.time isEqualToString:message.time]) ? YES : NO;
-        message = singleMessage;
-        
-        [self.dataSource addObject:singleMessage];
+- (void)scrollCell {
+    if (self.dataSource.count) {
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count -1 inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
     }
 }
 
@@ -142,6 +124,7 @@ static NSString *me = @"me";
  *  发添加事物
  */
 - (IBAction)addAddtion:(id)sender {
+    
 }
 /**
  *  发表情
@@ -163,6 +146,7 @@ static NSString *me = @"me";
 - (void)sendMessageWithMessage:(NSString *)message {
     [self.singleChatTool sendMessagetoContact:self.contactID WithTextMessage:message AndAttributes:@"text"];
 }
+
 /**
  *  接受聊天信息
  */
@@ -193,7 +177,6 @@ static NSString *me = @"me";
     return self.dataSource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     // 设置 cellIDE
     SingleMessage *message = self.dataSource[indexPath.row];
     
@@ -216,21 +199,21 @@ static NSString *me = @"me";
     
     SingleMessage *message = self.dataSource[indexPath.row];
     
-//    if ( (indexPath.row == self.dataSource.count - 1) && (self.dataSource.count!= 0) ) {
+    if ( (indexPath.row == self.dataSource.count - 1) && (self.dataSource.count!= 0) ) {
 //        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:NO];
-//    }
-
+    }
+    
     return message.cellHeight;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
-    if (indexpath.row < 0) {
-    } else {
-        [self.tableView scrollToRowAtIndexPath: indexpath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    }
+//    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
+//    if (indexpath.row < 0) {
+//    } else {
+//        [self.tableView scrollToRowAtIndexPath: indexpath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//    }
     
 }
 
@@ -239,9 +222,12 @@ static NSString *me = @"me";
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (self.messageTextField.text.length) {
         [self createDataSourceWithTextMessage:self.messageTextField.text andType:@"0"];
-        [self sendMessageWithMessage:textField.text];
-
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self sendMessageWithMessage:textField.text];
+        });
         self.messageTextField.text = nil;
+        
         return YES;
         
     } else {
@@ -250,51 +236,25 @@ static NSString *me = @"me";
     
 }
 
-#pragma mark - UIGestureRecognizerDelegate - 解决手势冲突问题
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(nonnull UITouch *)touch{
-
-    [self.messageTextField resignFirstResponder];
-
-    return YES;
-}
-
-
 #pragma mark - 键盘通知处理
-/**
- *  键盘即将显示
- */
 - (void)keyBoardWillShow:(NSNotification *)note{
     
-    double aniDuring = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    CGRect KeyboardRect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    CGFloat ty = - KeyboardRect.size.height;
-    [UIView animateWithDuration:aniDuring animations:^{
-        self.view.y += ty;
+    CGRect rect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat ty = - rect.size.height;
+    [UIView animateWithDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(0, ty);
     }];
     
-    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
-    if (indexpath.row < 0) {
-    } else {
-        [self.tableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    if (self.dataSource.count) {
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count -1 inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
     }
 }
-/**
- *  键盘即将退出
- */
+#pragma mark 键盘即将退出
 - (void)keyBoardWillHide:(NSNotification *)note{
-    
-    double aniDuring = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    CGRect KeyboardRect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    CGFloat ty = - KeyboardRect.size.height;
-    [UIView animateWithDuration:aniDuring animations:^{
-        self.view.y -= ty;
+    [UIView animateWithDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        self.view.transform = CGAffineTransformIdentity;
     }];
 }
-
 #pragma mark - 懒加载
 - (NSArray *)dataSource {
     if (!_dataSource) {
@@ -302,5 +262,37 @@ static NSString *me = @"me";
     }
     return _dataSource;
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - UIGestureRecognizerDelegate - 解决手势冲突问题
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(nonnull UITouch *)touch{
+    
+    [self.messageTextField resignFirstResponder];
+    
+    return YES;
+}
+
+/**
+ *  加载基础数据
+ */
+- (void)createDataSource1 {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@"plist"];
+    NSArray *plistArr = [NSArray arrayWithContentsOfFile:plistPath];
+    
+    SingleMessage *message = nil;
+    for (NSDictionary *subDic in plistArr) {
+        SingleMessage *singleMessage = [[SingleMessage alloc]init];
+        [singleMessage setValuesForKeysWithDictionary:subDic];
+        singleMessage.hideTime  = ([singleMessage.time isEqualToString:message.time]) ? YES : NO;
+        message = singleMessage;
+        
+        [self.dataSource addObject:singleMessage];
+    }
+}
+
 
 @end
